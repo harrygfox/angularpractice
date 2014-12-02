@@ -1,13 +1,18 @@
 app = angular.module('practice', []);
 
-app.controller('firstCtrl', function($scope) {
-    // $scope.data = {
-    //     message: "hello"
-    // };
+app.factory('Data', function() {
+    return {
+        message: "Hello"
+    }
 });
 
-app.controller('secondCtrl', function($scope) {
-    // $scope.data = {
-    //     message: "goodbye"
-    // };
+app.controller('firstCtrl', function($scope, Data) {
+    $scope.data = Data;
+});
+
+app.controller('secondCtrl', function($scope, Data) {
+    $scope.data = Data;
+    $scope.backwardsMessage = function(message) {
+        return message.split("").reverse().join("");
+    }
 });

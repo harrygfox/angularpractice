@@ -12,16 +12,21 @@ Keep in mind:
 4. Put control logic in the directive controller, and DOM logic in the link function; scope sharing is the glue. 
 5. AngularJS Router works like a server-side router. When a route is hit it injects a defined template into ng-view and the defined controller can be instantiated. 
 
-Data Binding
+##Data Binding
 
 - This is the ability to make your html reflect the data that you pass to attributes. It allows you to write something in one place and have it instantaneously watched and parsed by angular. 
 - If Controllers are defined but the details of their scope are not, then the a controller sibling will bind over the others - by inheritence.
 - The significance of ng-model="something.something" - having just message means there is no binding across instances because they are separate. data.message -> when the message is changed it is just the message on the data and so it is reflected at everyinstance of data.message.
     - ng-model is the way of allowing dynamic alteration of a data-binding, rather than simply displaying the data-bind with the use of curly braces.
 
-Dependency Injection
+###Services
+Services allow data-binds to be shared across controllers. The dependency created in the factory can be passed as a dependency to the controllers that you wish to use that service. This further modularises and connects relevant controllers. 
 
-- Quite straightforwardly this is the idea of injecting dependencies rather than having to define them in functions. Key dependencies that can be injected straight into things are $scope, $location, $watch etc. 
+##Dependency Injection
+
+- Quite straightforwardly this is the idea of injecting dependencies rather than having to define them in functions. Key dependencies that can be injected straight into things are $scope, $location, $watch etc.
+
+
 
 
 
