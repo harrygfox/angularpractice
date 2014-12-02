@@ -1,3 +1,5 @@
+`bower install angular#1.2.27`
+
 AngularJS is a Model-View-Controller framework. The view is what the user sees (DOM), the controller is what the user interacts with (JavaScript Classes), and the model is what binds the two together: feeding imformation from one to update the other (data stored in object properties). 
 
 Keep in mind:
